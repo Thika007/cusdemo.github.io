@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register New User</title>
+    <link rel="stylesheet" href="Css/reg.css">
+</head>
+<body>
+    <div class="container">
+        <div class="register-form">
+            <div class="logo-container">
+                <img src="img/cusdec.png" alt="Logo">
+            </div>
+            <h1>Register new user</h1>
+            <p>You may add all the TIN numbers which requires access to.</p>
+            <form>
+                
+                <label for="first-id">First Name*</label>
+                <input type="text" id="first-Name" name="first-Name" required>
+
+                <label for="last-Name">Last Name*</label>
+                <input type="text" id="last-Name" name="last-Name" required>
+
+                <label for="NIC">NIC*</label>
+                <input type="text" id="NIC" name="NIC" required>
+
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="user-Name">User Name*</label>
+                <input type="text" id="user-Name" name="user-Name" required>
+
+                <div class="password-container">
+                    <div>
+                        <label for="password">Password*</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div>
+                        <label for="re-password">Re-enter Password*</label>
+                        <input type="password" id="re-password" name="re-password" required>
+                    </div>
+                </div>
+
+                
+
+                <p>Please enter your company details below.*</p>
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>TIN Number</th>
+                            <th>Company Name</th>
+                            <th>Consent Letter</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="tin1" required></td>
+                            <td><input type="text" name="company1" required></td>
+                            <td><input type="file" name="consent1" required></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" name="tin2" required></td>
+                            <td><input type="text" name="company2" required></td>
+                            <td><input type="file" name="consent2" required></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" name="tin3" required></td>
+                            <td><input type="text" name="company3" required></td>
+                            <td><input type="file" name="consent3" required></td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+
+                 <div class="add">
+                <button type="button" id="addRowBtn" class="back-btn">Add New</button>
+                 </div>
+
+                 <br>
+
+                <p>Your request will be forwarded to Sri Lanka Customs. Account creation will proceed upon approval of the documents submitted by you.</p>
+                
+                <div class="terms">
+                    <div class="terms">
+                    <input class="terms" type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I Agree to <a href="#">Terms & Conditions</a></label>
+                    </div>
+                    <div class="buttons">
+                        <a href="login.html"><button type="button" class="cancel-btn">Cancel</button></a>
+                        <a href="login.html"></a><button type="submit" class="submit-btn">Submit</button></a>
+                    </div>
+
+                </div>
+                
+                
+            </form>
+        </div>
+    </div>
+
+    <script src="Js/reg.js"></script>
+</body>
+</html>

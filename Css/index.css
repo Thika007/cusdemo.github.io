@@ -1,0 +1,256 @@
+body {
+               /* background-color:#ADA996;background: linear-gradient(to right, #ADA996, #F2F2F2, #DBDBDB, #EAEAEA); */
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .card-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                margin: 20px;
+            }
+    
+            .card {
+                border-radius: 10px;
+                padding: 20px;
+                text-align: left;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                flex: 1 1 200px;
+                margin: 10px;
+                display: grid;
+                grid-template-rows: auto auto auto;
+                grid-template-columns: auto 1fr;
+                gap: 10px;
+                align-items: center;
+                transition: transform 0.2s;
+                color: white;
+                position: relative;
+            }
+    
+            .purple-card {
+                    background: #EEDAF6;
+                    border:2px solid #bd62cb;
+            }
+    
+            .green-card {
+                    background: #E0FFD1;
+                    border:2px solid #8bc34a;
+            }
+    
+            .yellow-card {
+                    background: #FFF5CC;
+                    border:2px solid #ffc107;
+            }
+    
+            .red-card {
+                    background: #FFD3D3;
+                    border:2px solid #ff5722;
+            }
+
+
+            #shiny-purple-text {
+                background: linear-gradient(135deg, #6a4b93, #bd62cb);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: transparent;
+                /* font-size: 24px; */
+                font-weight: bold;
+                /* You can adjust font size, weight, and other properties as needed */
+            }
+
+            #shiny-green-text {
+                background: linear-gradient(135deg, #4caf50, #8bc34a);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: transparent;
+                /* font-size: 24px; */
+                font-weight: bold;
+                /* You can adjust font size, weight, and other properties as needed */
+            }
+
+            #shiny-yellow-text {
+                background: linear-gradient(135deg, #ffeb3b, #ffc107);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: transparent;
+                /* font-size: 24px; */
+                font-weight: bold;
+                /* You can adjust font size, weight, and other properties as needed */
+            }
+
+            #shiny-red-text {
+                background: linear-gradient(135deg, #f44336, #ff5722);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: transparent;
+                /* font-size: 24px; */
+                font-weight: bold;
+                /* You can adjust font size, weight, and other properties as needed */
+            }
+            
+            
+            
+            
+            
+    
+            .card:hover {
+                transform: translateY(-10px);
+            }
+    
+            .card-icon {
+                font-size: 35px;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+    
+            .card-content h3 {
+                margin: 0;
+                font-size: 1.2em;
+                grid-column: 1 / span 2;
+            }
+    
+            .card-content p {
+                margin:1%;
+                color: black;
+                font-size: 24px;
+                font-weight: bold;
+                grid-column: 1 / span 2;
+                width: 250px;
+                height: 25px;
+            }
+    
+            @media (max-width: 768px) {
+                .card {
+                    flex: 1 1 100%;
+                }
+            }
+                
+    
+    
+    
+    
+    
+            .modal {
+                display: none; 
+                position: fixed; 
+                z-index: 1; 
+                left: 0;
+                top: 0;
+                width: 100%; 
+                height: 100%; 
+                overflow: auto; 
+                background-color: rgba(0,0,0,0.4); 
+            }
+            .modal-content {
+                background-color: #fefefe;
+                margin: 15% auto; 
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%; 
+                max-width: 600px;
+            }
+            .modal-header {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            .modal-footer {
+                text-align: center;
+                margin-top: 20px;
+            }
+            .modal-footer button {
+                padding: 10px 20px;
+                margin: 5px;
+                cursor: pointer;
+            }
+            .modal-footer .owner,
+            .modal-footer .continue {
+                background-color: #69a240; 
+                color: white;
+                border: none;
+            }
+            .modal-footer .not-owner {
+                background-color: #de3b40;
+                color: white;
+                border: none;
+            }
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .back {
+                /* margin-bottom: 10%; */
+            }
+    
+            /* .btn  {
+                
+            } */
+
+            #centered-table th,
+            #centered-table td {
+                text-align: center;
+                text-justify: auto;
+            }
+
+
+
+
+
+            th, td {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            
+            .status {
+                padding: 5px;
+                border-radius: 5px;
+                /* color: #fff; */
+                text-align: center;
+                width: 80px;
+            }
+            
+            .status.queried {
+                /* background-color: #f5a59c; */
+                color: #9e0101;
+                font-weight: bold;
+            }
+            
+            .status.completed {
+                /* background-color: #99f5bf; */
+                color: #09a804;
+                font-weight: bold;
+            }
+            
+            .status.pending {
+                /* background-color: #f7e49b; */
+                color: #999601;
+                font-weight: bold;
+            }
+            
+            a {
+                color: #000000;
+                text-decoration: none;
+            }
+            
+            .btn {
+                background-color: #0c0885;
+                color: #fff;
+                text-decoration: none;
+                border-color:#0c0885 ;
+            }
+
+            .btn:hover {
+                background-color: #231F87;
+            }

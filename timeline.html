@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSDEC Tracker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #95c9fd;
+            top: 0;
+            bottom: 0;
+            left: 15%;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .timeline-item .timeline-icon {
+            background: #fff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 15%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .timeline-item .timeline-content {
+            padding: 20px;
+            border-radius: 6px;
+            position: relative;
+            background-color: #f0f8ff;
+            border: 1px solid #87c3ff;
+            width: 60%;
+            margin-left: 30%;
+        }
+        .timeline-item .timeline-icon .checked {
+            color: green;
+        }
+        .timeline-item .timeline-icon .unchecked {
+            color: red;
+        }
+        .timeline-item .timeline-point {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border: 19px solid green;
+            border-radius: 50%;
+            position: absolute;
+            left: 15%;
+            transform: translateX(-50%);
+            top: 6px;
+            margin-top: -10px;
+            z-index: 1;
+        }
+        .timeline-item .timeline-point.unchecked {
+            border-color: red;
+        }
+        .col-1 {
+            margin-left: 5px;
+            margin-bottom: 5px;
+        }
+        .btn-primary {
+            color: #fff;
+            background-color: #231F87;
+            border-color: #231F87;
+        }
+        .btn-primary:hover {
+            background-color: #0c0885;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Sri Lanka Customs Declaration Tracking System</h2>
+        <p>CBHQ1 11785 <a href="container.html">View Container Locations</a></p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-icon">
+                    <i class="fa fa-check-circle fa-2x" style="color: green;"></i>
+                </div>
+                <div class="timeline-content">
+                    <p>04/01/2024 12:44PM</p>
+                    <p>Submission</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-icon">
+                    <i class="fa fa-check-circle fa-2x" style="color: green;"></i>
+                </div>
+                <div class="timeline-content">
+                    <p>04/01/2024 01:23PM</p>
+                    <p>Assessment</p>
+                    <p>Payable: LKR 38,742.00</p>
+                    <p>Penalty / Additional Entry: N/A</p>
+                    <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#details-table">Details</button>
+                    <div id="details-table" class="collapse">
+                        <table class="table table-bordered">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CID</td>
+                                    <td>12,269.00</td>
+                                </tr>
+                                <tr>
+                                    <td>EIC</td>
+                                    <td>1,400.00</td>
+                                </tr>
+                                <tr>
+                                    <td>XID</td>
+                                    <td>0.00</td>
+                                </tr>
+                                <tr>
+                                    <td>VAT</td>
+                                    <td>18,723.00</td>
+                                </tr>
+                                <tr>
+                                    <td>PAL</td>
+                                    <td>2,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>SSL</td>
+                                    <td>4,350.00</td>
+                                </tr>
+                                <tr>
+                                    <th>Total</th>
+                                    <th>38,742.00</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-icon">
+                    <i class="fa fa-check-circle fa-2x" style="color: green;"></i>
+                </div>
+                <div class="timeline-content">
+                    <p>04/01/2024 01:40PM</p>
+                    <p>Appraised</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-point unchecked"></div>
+                <div class="timeline-icon">
+                    <i class="fa fa-times-circle fa-2x" style="color: #ff0000;"></i>
+                </div>
+                <div class="timeline-content">
+                    <p>04/01/2024 03:00PM</p>
+                    <p>Queried: Preventive I Branch</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3"> 
+            <div class="col-1">
+                <a href="index.html" class="btn btn-primary">Back</a>
+            </div>
+        </div>
+       
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+            crossorigin="anonymous">
+    </script>
+
+</body>
+</html>
