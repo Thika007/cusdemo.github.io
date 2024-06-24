@@ -30,7 +30,7 @@ body {
 }
 
 .form-control {
-    border-radius: 5px;
+    border-radius: solid #e2eeff 5px;
     display: block;
     width: 100%;
     font-size: 1rem;
@@ -42,7 +42,6 @@ body {
     appearance: none;
     background-color: #fff;
     background-clip: padding-box;
-    border: var(--bs-border-width) solid #dee2e6;
     border-radius: var(--bs-border-radius);
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
